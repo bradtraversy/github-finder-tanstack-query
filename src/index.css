@@ -1,0 +1,266 @@
+/* Reset & Base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #f0f2f5;
+  color: #333;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.container {
+  width: 100%;
+  min-width: 400px;
+  background: #fff;
+  padding: 2.5rem 2rem;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+h1 {
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+  color: #222;
+}
+
+/* Form */
+.form {
+  position: relative;
+  display: flex;
+  gap: 0.5rem;
+  flex-direction: column;
+}
+
+input[type='text'] {
+  flex: 1;
+  padding: 0.75rem 1rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  transition: 0.2s ease;
+  width: 100%;
+}
+
+input[type='text']:focus {
+  border-color: #0077ff;
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(0, 119, 255, 0.2);
+}
+
+button {
+  padding: 0.75rem 1.2rem;
+  font-size: 1rem;
+  background-color: #0077ff;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+/* User Card */
+.user-card {
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.07);
+  text-align: center;
+  max-width: 400px;
+  margin: 0 auto;
+  margin-top: 2rem;
+  line-height: 1.5;
+}
+
+.avatar {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+  border: 2px solid #eee;
+}
+
+.user-card h2 {
+  margin-bottom: 0.5rem;
+  font-size: 1.25rem;
+  color: #222;
+}
+
+.bio {
+  font-size: 0.95rem;
+  color: #555;
+  margin-bottom: 1.5rem;
+}
+
+.profile-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: #24292e;
+  color: #fff;
+  text-decoration: none;
+  font-size: 0.95rem;
+  font-weight: 500;
+  padding: 0.6rem 1.2rem;
+  border-radius: 8px;
+  transition: background-color 0.2s ease;
+  width: 100%;
+  text-align: center;
+  justify-content: center;
+}
+
+.profile-btn:hover {
+  background-color: rgb(47, 53, 59);
+}
+
+/* Recent Searches */
+.recent-searches {
+  margin-top: 2rem;
+  background-color: #f5f5f5;
+  padding: 1.5rem;
+  border-radius: 10px;
+}
+
+.recent-header {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #444;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+.recent-searches ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.recent-searches li {
+  margin-bottom: 0.75rem;
+}
+
+.recent-searches button {
+  width: 100%;
+  text-align: left;
+  padding: 0.75rem 1rem;
+  background-color: #e8e8e8;
+  border: none;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  color: #222;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  transition: background-color 0.2s ease;
+  cursor: pointer;
+}
+
+.recent-searches button:hover {
+  background-color: #dcdcdc;
+}
+
+.user-icon {
+  color: #666;
+  font-size: 1rem;
+}
+
+/* Suggestions Dropdown */
+.dropdown-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.suggestions {
+  position: absolute;
+  width: 100%;
+  max-height: 220px;
+  margin-top: 0.25rem;
+  background: #fff;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  overflow-y: auto;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  z-index: 10;
+  padding: 0;
+  list-style: none;
+}
+
+.suggestions li {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.65rem 1rem;
+  cursor: pointer;
+  transition: background 0.2s ease;
+  font-size: 0.95rem;
+  color: #333;
+}
+
+.suggestions li:hover {
+  background-color: #f2f2f2;
+}
+
+.avatar-xs {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.user-card-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+  align-items: center;
+}
+
+/* Follow Button */
+.follow-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  color: #ffffff;
+  background-color: #22c55e;
+  width: 100%;
+  text-align: center;
+  justify-content: center;
+}
+
+.follow-btn.following {
+  background-color: #ef4444; /* 🔥 RED for following (unfollow state) */
+}
+
+.follow-btn:hover {
+  opacity: 0.9;
+}
+
+.follow-btn.following:hover {
+  background-color: #dc2626; /* Darker red on hover */
+}
+
+.follow-btn:disabled {
+  background-color: #9ca3af;
+  cursor: not-allowed;
+}
+
+.follow-icon {
+  font-size: 1.2rem;
+}
