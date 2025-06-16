@@ -1,54 +1,34 @@
-# React + TypeScript + Vite
+# GitHub Finder App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is a project from my Modern React From The Beginning Course to show how to use TanStack Query. It allows you to search GitHub users using the GitHub API.
 
-Currently, two official plugins are available:
+<img src="public/screen.png" width="500" alt="" />
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Features
 
-## Expanding the ESLint configuration
+- Search user by login
+- Dropdown filtering
+- Recent searches (saved to localstorage)
+- Follow/Unfollow button
+- Sonner for toast notifications
+- TypeScript & TanStack Query
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## Important Note
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+This project is for learning purposes only. We store your Github personal token in the .env file and use it to follow/unfollow users through the app. If you push this to production, do not use the follow feature and take your key out of the `.env` It was only used to demonstrate how to use TanStack Query mutations.
+
+## Usage
+
+Install dependencies:
+
+```bash
+npm Install
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+Rename the `.env-example` to `.env` and add your key if you are running locally.
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+Run the server:
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
+```bash
+npm run dev
 ```
